@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #d4bbbb;
+}
+
+/* Main background/container */
+.bg {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(bgg.jpg);
+}
+
+/* To-do box */
+.todo {
+    width: 500px;
+    min-height: 200px;
+
+    background: WHITE;
+    padding: 30px;
+    border: 1px solid #10100f;
+    border-radius: 10px;
+}
+
+/* Heading + image */
+.todo h2 {
+    display: inline-block;
+    font-size: 28px;
+    color: #1e1a3a;
+    margin-bottom: 25px;
+    font-family: poppins;
+    font-weight: 900;
+}
+
+/* Icon */
+.todo img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Input + Button */
+.row {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    background: #ded9d7;
+
+    border-radius: 30px;
+    padding: 5px;
+}
+.row {
+    margin-bottom: 10px;
+}
+/* Input */
+#input-box {
+    flex: 1;
+    font-family: poppins, sans-serif;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px 28px;
+    font-size: 16px;
+}
+
+/* Add button */
+.row button {
+    border: none;
+    outline: none;
+    
+    background: #1c1d20;
+    color: white;
+    padding: 13px 35px;
+
+    border-radius: 25px;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+/* Button hover */
+.row button:hover {
+    background: #3f3f41;
+}
+ul li {
+    list-style: none;
+    padding: 12px 8px 12px 40px;
+    user-select: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    position: relative;
+}
+ul li::before {
+    content:'';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 65%;
+    background-image: url(un.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 2px;
+
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: #77719b;
+}
+ul li.checked::before{
+    background-image: url(che.png);
+    
+}
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    
+}
+ul li span:hover{
+    background: #464648;
+    color: white;
+}
+@media (max-width: 600px) {
+
+    .todo {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .todo h2 {
+        font-size: 24px;
+    }
+
+    #input-box {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .row button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
