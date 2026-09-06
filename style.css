@@ -145,10 +145,17 @@ ul li span:hover{
 @media (max-width: 600px) {
 
     .todo {
-        width: 90%;
+        width: 100%;
         padding: 20px;
+        border: 0px solid #10100f;
+        border-top: 50px transparent;
     }
-
+    .bg{
+        background-position: center;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-image: url(wall.jpg);
+    }
     .todo h2 {
         font-size: 24px;
     }
